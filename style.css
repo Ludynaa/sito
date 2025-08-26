@@ -9,7 +9,7 @@ html,
 body {
   height: 100%;
   font-family: 'Montserrat', Arial, sans-serif;
-  background: #232946; /* blu notte elegante */
+  background: linear-gradient(120deg, #799EFF 0%, #FEFFC4 40%, #FFDE63 70%, #FFBC4C 100%);
   color: #fff;
   overflow-x: hidden;
   position: relative;
@@ -59,7 +59,8 @@ nav {
   justify-content: space-between;
   padding: 24px 48px;
   width: calc(100% - 32px);
-  background: rgba(35,41,70,0.85);
+  background: rgba(49,76,182,0.65); /* Violet Blue scuro */
+  backdrop-filter: blur(16px);
   border-radius: 32px;
   box-shadow: 0 4px 24px rgba(35,41,70,0.08);
   margin: 32px auto 0 auto;
@@ -106,8 +107,8 @@ nav {
 }
 
 .nav-center li a:hover {
-  background: #b8c1ec;
-  color: #232946;
+  background: #232946;
+  color: #fff;
 }
 
 .nav-right {
@@ -118,11 +119,11 @@ nav {
 .btn-work,
 .btn-quote {
   padding: 18px 40px;
-  background: linear-gradient(90deg, #b8c1ec 0%, #eebbc3 100%);
-  color: #232946;
+  background: linear-gradient(90deg, #314CB6 0%, #B4ADEA 100%); /* Violet Blue to Periwinkle */
+  color: #fff;
   font-weight: 700;
   box-shadow: 0 4px 24px rgba(184,193,236,0.15);
-  border: 2px solid #eebbc3;
+  border: none;
   border-radius: 32px;
   font-size: 1.15rem;
   transition: transform 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s;
@@ -135,9 +136,9 @@ nav {
 .btn-quote:hover {
   transform: scale(1.07);
   box-shadow: 0 8px 32px rgba(46,206,137,0.25);
-  background: linear-gradient(90deg, #2dce89 0%, #b8c1ec 100%);
+  background: linear-gradient(90deg, #B4ADEA 0%, #314CB6 100%); /* Periwinkle to Violet Blue */
   color: #fff;
-  border-color: #2dce89;
+  border-color: #314CB6;
 }
 
 /* Sezione hero */
@@ -154,7 +155,8 @@ nav {
   width: calc(100% - 32px);
   margin: 40px auto 0 auto;
   padding: 64px 64px 64px 64px; /* padding ampio */
-  background: rgba(35,41,70,0.70);
+  background: rgba(49,76,182,0.55); /* Violet Blue scuro */
+  backdrop-filter: blur(16px);
   border-radius: 32px;
   box-shadow: 0 8px 32px rgba(35,41,70,0.10);
 }
@@ -163,7 +165,7 @@ nav {
   font-size: 1.4rem;
   font-weight: 500;
   margin-bottom: 24px;
-  color: #b8c1ec; /* blu chiaro */
+  color: #fff;
   text-shadow: 0 2px 12px rgba(184,193,236,0.15);
 }
 
