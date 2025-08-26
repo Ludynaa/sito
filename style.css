@@ -1,0 +1,305 @@
+/* Reset e impostazioni base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #E9C7AD;
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Overlay sfumato */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(circle at 80% 60%, #e6e6c6 0%, transparent 60%);
+  opacity: 0.35;
+}
+
+/* Header e logo */
+header {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  padding: 20px;
+}
+
+.logo {
+  display: block;
+  height: 180px;  /* dimensione del logo */
+  width: 180px;   /* dimensione del logo */
+  object-fit: contain;
+  margin: 0;
+}
+
+/* Logo nella navbar (più piccolo) */
+.nav-logo {
+  height: 2.5rem;
+  width: auto;
+}
+
+
+/* Barra di navigazione */
+nav {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 0 0 80px; /* padding sinistro uguale alla hero */
+  width: 100%;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: static; /* rimuovi left/top */
+}
+
+.nav-links-right {
+  display: flex;
+  align-items: center;
+  gap: 24px; /* diminuito da 40px a 24px */
+  margin-left: auto; /* sposta tutto il blocco a destra */
+  margin-right: 64px; /* lascia spazio dopo Get Quote */
+}
+
+.brand {
+  font-size: 1.7rem; /* diminuito */
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: #fff;
+}
+
+.nav-center {
+  display: flex;
+  gap: 48px;
+  list-style: none;
+}
+
+.nav-center li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem; /* diminuito */
+  font-weight: 500;   /* aumentato */
+  transition: color 0.3s;
+  letter-spacing: 0.02em;
+  padding: 4px 0;
+}
+
+.nav-center li a:hover {
+  color: #b2ffb2;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.btn-quote {
+  padding: 20px 48px;
+  background: #b2ffb2;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 32px;
+  font-size: 1.1rem; /* diminuito */
+  font-weight: 600;   /* aumentato */
+  cursor: pointer;
+  transition: background 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-right: 48px; /* aggiungi spazio dopo il bottone */
+}
+
+.btn-quote:hover {
+  background: #a0e6a0;
+}
+
+/* Sezione hero */
+.hero {
+  position: relative;
+  z-index: 5;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 172px 0 0 80px; /* stesso padding sinistro di nav */
+}
+
+.hero-subtitle {
+  font-size: 1.6rem; /* diminuito */
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: #e6e6c6;
+  opacity: 0.85;
+}
+
+.hero h1 {
+  font-size: 5.5rem; /* diminuito */
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 56px;
+  color: #fff;
+  max-width: 1100px;
+  letter-spacing: -0.04em;
+}
+
+.btn-group {
+  margin-top: 36px;
+  display: flex;
+  gap: 24px;
+}
+
+.btn-work {
+  padding: 22px 56px;
+  background: #b2ffb2;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 40px;
+  font-size: 1.3rem; /* diminuito */
+  font-weight: 600;  /* aumentato */
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.3s;
+}
+
+/* Windows watermark */
+.windows-watermark {
+  position: fixed;
+  right: 32px;
+  bottom: 24px;
+  color: #e6e6c6;
+  font-size: 1.1rem; /* diminuito */
+  opacity: 0.7;
+  z-index: 100;
+  text-align: right;
+  pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+  .btn-work {
+    font-size: 1rem;
+    padding: 14px 32px;
+  }
+  .nav-center li a,
+  .btn-quote {
+    font-size: 0.9rem;
+  }
+  .brand {
+    font-size: 1rem;
+  }
+  .windows-watermark {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 900px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 24px 0 24px;
+    gap: 12px;
+  }
+  .nav-links-right {
+    gap: 24px;
+  }
+  .nav-center {
+    gap: 20px;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .btn-work {
+    font-size: 1rem;
+    padding: 12px 28px;
+  }
+  .hero {
+    padding-left: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .brand { font-size: 1rem; }
+  .logo { height: 32px; width: 32px; }
+.windows-watermark { font-size: 0.8rem; }
+  .windows-watermark { font-size: 0.8rem; }
+}
+}
+
+/* Windows watermark */
+.windows-watermark {
+  position: fixed;
+  right: 32px;
+  bottom: 24px;
+  color: #e6e6c6;
+  font-size: 1.1rem; /* diminuito */
+  opacity: 0.7;
+  z-index: 100;
+  text-align: right;
+  pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+  .btn-work {
+    font-size: 1rem;
+    padding: 14px 32px;
+  }
+  .nav-center li a,
+  .btn-quote {
+    font-size: 0.9rem;
+  }
+  .brand {
+    font-size: 1rem;
+  }
+  .windows-watermark {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 900px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 24px 0 24px;
+    gap: 12px;
+  }
+  .nav-links-right {
+    gap: 24px;
+  }
+  .nav-center {
+    gap: 20px;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .btn-work {
+    font-size: 1rem;
+    padding: 12px 28px;
+  }
+  .hero {
+    padding-left: 16px;
+  }
+  .shape { display: none; }
+}
+@media (max-width: 600px) {
+  .brand { font-size: 1rem; }
+  .logo { height: 32px; width: 32px; }
+.windows-watermark { font-size: 0.8rem; }
+  .windows-watermark { font-size: 0.8rem; }
+}
