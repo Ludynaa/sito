@@ -58,13 +58,14 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 24px 48px;
+  max-width: 1600px;
   width: calc(100% - 32px);
   background: rgba(49,76,182,0.65); /* Violet Blue scuro */
   backdrop-filter: blur(16px);
   border-radius: 32px;
   box-shadow: 0 4px 24px rgba(35,41,70,0.08);
   margin: 32px auto 0 auto;
-  max-width: 1400px;
+  
 }
 
 .nav-left {
@@ -151,7 +152,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  max-width: 1400px; /* uguale a nav */
+  max-width: 1600px; /* uguale a nav */
   width: calc(100% - 32px);
   margin: 40px auto 0 auto;
   padding: 64px 64px 64px 64px; /* padding ampio */
