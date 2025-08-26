@@ -37,7 +37,7 @@ header {
 .logo {
   display: block;
   height: 80px;
-  width: 80px;
+  width: 160px;
   object-fit: contain;
   margin-right: 24px;
   filter: drop-shadow(0 4px 24px rgba(184,193,236,0.25));
