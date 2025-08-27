@@ -6,33 +6,65 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Overlay sfumato -->
-  <div class="overlay"></div>
+  <!-- Splash screen animato -->
+  <div id="splash" class="splash-active">
+    <div class="splash-container">
+      <img src="immagini/logoFinale3.png" alt="Logo" class="splash-logo">
+      <div class="toggle-container">
+        <label class="switch">
+          <input type="checkbox" id="enter-toggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
 
-  <!-- Barra di navigazione -->
-  <nav>
-    <div class="nav-left">
-      <img src="immagini\logoFinale3.png" class="logo" />
-    </div>
-    <div class="nav-links-right">
-      <ul class="nav-center">
-        <li><a href="#works">Works</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="btn-quote">Get Quote</button>
-    </div>
-  </nav>
+  <div id="main-content" style="display:none;">
+    <div class="overlay"></div>
+    <!-- Barra di navigazione -->
+    <nav>
+      <div class="nav-left">
+        <img src="immagini/logoFinale3.png" class="logo" />
+      </div>
+      <div class="nav-links-right">
+        <ul class="nav-center">
+          <li><a href="#works">Works</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="btn-quote">Get Quote</button>
+      </div>
+    </nav>
 
-  <!-- Sezione hero -->
-  <section class="hero">
-    <p class="hero-subtitle">Strategia • Creatività • Crescita</p>
-    <h1>
-      Da idea a lancio, gestiamo ogni fase del progetto
-    </h1>
-    <div class="btn-group">
-      <a href="#works" class="btn btn-work">See Work</a>
-    </div>
-  </section>
+    <!-- Sezione hero -->
+    <section class="hero">
+      <p class="hero-subtitle">Strategia • Creatività • Crescita</p>
+      <h1>
+        Da idea a lancio, gestiamo ogni fase del progetto
+      </h1>
+      <div class="btn-group">
+        <a href="#works" class="btn btn-work">See Work</a>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    window.onload = function() {
+      const splash = document.getElementById('splash');
+      const main = document.getElementById('main-content');
+      const toggle = document.getElementById('enter-toggle');
+      toggle.addEventListener('change', function() {
+        if (toggle.checked) {
+          splash.classList.add('splash-hide');
+          setTimeout(() => {
+            splash.style.display = 'none';
+            main.style.display = '';
+            main.classList.add('main-entrance-animate');
+          }, 600);
+        }
+      });
+    };
+  </script>
 </body>
 </html>
+
